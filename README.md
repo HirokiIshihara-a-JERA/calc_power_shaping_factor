@@ -205,14 +205,14 @@ $$
 
 ### 13.2 年度の定義
 
-年度開始月を $s$ とする。受渡日 $d_t$ の年を $\operatorname{year}(d_t)$、月を $m_t$ とすると、年度は
+年度開始月を $s$ とする。受渡日 $d_t$ の年を $\mathrm{year}(d_t)$、月を $m_t$ とすると、年度は
 
-$$
-y_t=
-\begin{cases}
-\operatorname{year}(d_t), & m_t\ge s,\\
-\operatorname{year}(d_t)-1, & m_t<s.
-\end{cases}
+$$ 
+y_t = 
+\begin{cases} 
+\mathrm{year}(d_t), & m_t \ge s, \\ 
+\mathrm{year}(d_t)-1, & m_t < s 
+\end{cases} 
 $$
 
 既定値 $s=4$ の場合、2024年4月1日から2025年3月31日までの観測はFY2024に属する。
@@ -226,11 +226,11 @@ $$
 年度開始日と終了日は
 
 $$
-B_y=\operatorname{Date}(y,s,1),
+B_y=\mathrm{Date}(y,s,1),
 $$
 
 $$
-F_y=\operatorname{Date}(y+1,s,1)-1\text{ day}
+F_y=\mathrm{Date}(y+1,s,1)-1\text{ day}
 $$
 
 である。完全年度の昇順集合を
@@ -422,7 +422,7 @@ $$
 とする。各候補窓のRMSEは
 
 $$
-\operatorname{RMSE}(E_L)
+\mathrm{RMSE}(E_L)
 =\sqrt{\frac{1}{N_L}
 \sum_{t\in\mathcal{V}_{E_L,T}}
 \left(e_t^{(E_L)}\right)^2}
@@ -433,7 +433,7 @@ $$
 MAEは
 
 $$
-\operatorname{MAE}(E_L)
+\mathrm{MAE}(E_L)
 =\frac{1}{N_L}
 \sum_{t\in\mathcal{V}_{E_L,T}}
 \left|e_t^{(E_L)}\right|
@@ -444,7 +444,7 @@ $$
 バイアスは
 
 $$
-\operatorname{Bias}(E_L)
+\mathrm{Bias}(E_L)
 =\frac{1}{N_L}
 \sum_{t\in\mathcal{V}_{E_L,T}}
 e_t^{(E_L)}
@@ -585,10 +585,10 @@ $$
 
 $$
 L^*
-=\operatorname*{arg\,min}_{L}
+=\mathrm{arg\,min}_{L}
 \left(
-\operatorname{RMSE}(E_L),
-\operatorname{MAE}(E_L),
+\mathrm{RMSE}(E_L),
+\mathrm{MAE}(E_L),
 L
 \right)
 $$
@@ -638,7 +638,7 @@ $$
 将来日 $d$ とコマ $h$ の受渡日時は
 
 $$
-\operatorname{DeliveryDateTime}(d,h)
+\mathrm{DeliveryDateTime}(d,h)
 =d+30(h-1)\text{ minutes}
 $$
 
@@ -707,8 +707,8 @@ $$
 
 $$
 L_c^*
-=\operatorname*{arg\,min}_{L}
-\operatorname{RMSE}^{(c)}(E_L)
+=\mathrm{arg\,min}_{L}
+\mathrm{RMSE}^{(c)}(E_L)
 $$
 
 したがって、異なるMarket Indexやエリア価格列が異なる最適lookback年数を選択することを許容する。最終出力では `price_column` により各系列を識別する。
@@ -764,7 +764,7 @@ $$
 
 $$
 L^*
-=\operatorname*{arg\,min}_{L}
+=\mathrm{arg\,min}_{L}
 \sqrt{
 \frac{1}{N_L}
 \sum_{t\in\mathcal{V}_{E_L,T}}
